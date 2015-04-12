@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>InterPro Project Blog Post (2)</title>
+</head>
+
+<body>
+<h1>Github Blog Post (2)</h1>
+
+<h2> 
+Interactive Programming 1 Project Progress Update 
+</h2>
+Upon recapping what my character was able to do during my last blog post, my character was able to:
+-	walk left and right when controlled by arrow keys
+-	face forward on the stage on default
+-	stay frozen in position when no arrow key is pressed down.
+<p>
+I have made some progress since my first blog post. My character can now  only walk within a 50% deadzone of the stage width. At first I found it challenging to figure out how to do to this. 
+</p>
+I had to think in a logical sense. To keep her within the 50% dead zone I had to calculate 50% of the stage width. I did this by dividing the stage width (1024) into sections. [{0 – 256 - 512 - 768 – 1024.]
+<p>
+I used greater and less than operators to confine my character from walking below the 256 or over 768. This kept her with the 512 section of the stage. 
+</p>
+After the deadzone was created, I then focused on created the parallax scrolling of the background stage. I uploaded my design onto the stage and then converted them into symbols.
+<p>
+Then I coded to ensure that the parallax scrolling kicked in once my character reached the limits of the 50% deadzone.
+</p>
+When the stage was working the way I wanted it to, I designed my character’s turn cycle within Adobe Illustrator and uploaded them into Flash.
+<p>
+I found uploading the turn cycle to be difficult because they when loaded into the character’s timeline, the turn cycle frames would disrupt the walk cycle.  
+</p>
+For unknown reasons, another copy of my character would attach itself onto the walk cycle and replace the shorts (parts of the clothing) symbol of my character. The character was walking around half naked, with another body lodged into her backside.
+<p>
+I fixed this problem by going to each frame of the walk cycle on the character timeline and deleting the extra body. Then I dragged out a new pair of shorts for the character from the symbol library for each frame. There has been no problem since this occurence.
+</p>
+  My code was executing both my walk and turn cycle at the same time. I still need to find a solution for this problem so for the moment i have the code for the turn cycle commented out. 
+ 
+ <p>
+ I have my Jump cycle uploaded and it seemes to be worksing without any challenge. I was able to do this through an up handler. The frames for the collision detection are playing on their own, with no collsion  with my character. I believe the reasn for this is because they have been put in the wrong place.
+ </p>
+<br>
+This is the embedded swf file of my project so far:
+<object width="1024" height="768" data="RECOVER_Interpro_proj_TheREALS1.swf"></object>
+</body>
+</html>
